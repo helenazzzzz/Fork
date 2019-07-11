@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+        <title>Fork | About</title>
+        <!--Links to CSS files-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">        
+        <link rel="stylesheet" type='text/css' href='base.css'>
+        <link rel="stylesheet" type='text/css' href='welcome.css'>
+        
+        <script>
+                function openmenu(category) {
+                if (document.getElementById(category).style.display == "none"){
+                    document.getElementById(category).style.display = "block";
+                } 
+                else {
+                    document.getElementById(category).style.display = "none";
+                }
+            }
+            
+            // Open and close hamburger menu on click
+            function myFunction() {
+              var x = document.getElementById("hamburger");
+              if (x.style.width < "10px") {
+                 document.getElementById("hamburger").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "275px";
+                // x.style.display = "none";
+              } else {
+                // x.style.display = "block";
+                document.getElementById("hamburger").style.width = "0px";
+                document.getElementById("main").style.marginLeft = "25px";
+              }
+            }
+        </script>
+        
+  </head>
+  <body>
+    <!--Show links to other pages in hamburger menu-->
+    <div id="hamburger">
+            <br/>
+            <br/>
+            <a href="about.html">about</a>
+            <a href="user_uploads.php">my uploads</a>
+            <a href="repo.php">favorites</a>
+            <a href="map.html">map</a>
+            <a href="reset_password.php">reset password</a>
+            <a href="logout.php" style="color: #FCF8E8;">sign out</a>
+        </div>
+        
+        <div id="main">
+        <!--Logo in header-->
+        <div class="page-header">
+            <i class="fa fa-bars" onclick="myFunction()"></i>
+            <a href="welcome.php"><img src="fork-mint-cream.png" height="40" alt="logo in mint"></a>
+            </div>
+            <!--Description of site-->
+            <div style = "width:80%; margin:auto;">
+            <p style = "font-size: 20px;">
+              The mission of Fork is to provide users with a simple, streamlined service for browsing and saving recipes.<br/>
+              Fork was created by Selena Liu, Helena Zhang, and Sophie Zhang of Mr. Hanas's CSE class. They are hopeful that you will find their project useful.
+            </p>
+        </div>
+        </div>
+        
+    <!--Contact information in footer-->
+    <footer> <!--contact us!-->
+    <p><br/>&#169; Fork 2019<br/>Email us with questions, comments, and concerns! <a href="mailto:seliu@ctemc.org">customerservice@fork.org</a></p>
+    </footer>
+  </body>
+</html>

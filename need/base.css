@@ -1,0 +1,350 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+:root {
+  --grapefruit: #F77367;
+  --cream: #FCF8E8;
+  --dark: #F77367;
+  --mint: #C7E8C7;
+  --darkmint: #AFD1AF;
+  --chocolate: #5B3D2A;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'Nunito', Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--grapefruit);
+}
+
+.fas {
+  font-size: 2em;
+  margin: 0 0.5em;
+}
+
+.fa{
+  margin: 0 1em;
+}
+
+hr{
+  color: var(--grapefruit);
+}
+
+#main .fa {
+  font-size: 2em;
+}
+
+.page-header {
+    border-bottom: 0px;
+}
+
+p{
+  font-family: 'Lato', Helvetica, sans-serif;
+  color: var(--chocolate);
+}
+
+table{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+html {
+  font-family: 'Lato', sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+::selection {
+  background: var(--mint); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: var(--mint); /* Gecko Browsers */
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: var(--chocolate);
+  background-color: var(--cream);
+  text-align: center;
+}
+
+.form-group {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.wrapper {
+    width: 350px;
+    padding: 20px;
+    margin: auto;
+}
+
+a {
+  color: var(--grapefruit);
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover,
+a:focus {
+  color: var(--grapefruit);
+  text-decoration: underline;
+}
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+label {
+  font-family: 'Nunito', sans-serif;
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--grapefruit);
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 17px;
+  text-align: left;
+  color: var(--chocolate);
+  font-family: "Lato";
+  font-weight: normal;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/*RADIO*/
+
+.radiomark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: var(--cream);
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a mint green background color */
+.container:hover input ~ .radiomark {
+  background-color: var(--mint);
+}
+
+/* When the radio button is checked, add a brown background */
+.container input:checked ~ .radiomark {
+  background-color: var(--chocolate);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radiomark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .radiomark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .radiomark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cream);
+}
+
+.search{
+  padding-left: 18px;
+  border-radius: 32px;
+  font-family: "Nunito";
+  font-size: 20px;
+}
+
+input{
+  padding-left: 24px;
+  padding-right: 24px;
+  border-radius: 32px;
+  font-family: "Nunito";
+  font-size: 20px;
+}
+
+.txtbox{
+  padding-left: 24px;
+  padding-right: 24px;
+  border-radius: 32px;
+  font-family: "Nunito";
+  font-size: 20px;
+}
+
+.btn{
+  border-radius:32px;
+}
+
+/*CHECKMARK*/
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: var(--cream);
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: var(--mint);
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: var(--chocolate);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+
+/* SUBMIT BUTTON */
+.btn-primary {
+  color: var(--cream);
+  background-color: var(--chocolate);
+  border-color: var(--chocolate);
+}
+.btn-primary:focus,
+.btn-primary.focus {
+  color: var(--cream);
+  background-color: #286090;
+  border-color: var(--chocolate);
+}
+.btn-primary:hover {
+  color: var(--cream);
+  background-color: var(--chocolate);
+  border-color: var(--chocolate);
+}
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+
+/* RESET BUTTON */
+
+.btn-default {
+  color: var(--chocolate);
+  background-color: var(--mint);
+  border-color: var(--mint);
+}
+.btn-default:focus,
+.btn-default.focus {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #8c8c8c;
+}
+.btn-default:hover {
+  color: #333;
+  background-color: var(--darkmint);
+  border-color: #adadad;
+}
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.btn-default .badge {
+  color: #fff;
+  background-color: #333;
+}
+
+.btn-danger {
+  border-radius:32px;
+  color: var(--cream);
+  background-color: var(--grapefruit);
+  border-color: var(--cream);
+}
+.btn-danger:focus,
+.btn-danger.focus {
+  color: var(--cream);
+  background-color: #286090;
+  border-color: var(--chocolate);
+}
+.btn-danger:hover {
+  color: var(--chocolate);
+  background-color: var(--grapefruit);
+  border-color: var(--chocolate);
+}
+.btn-danger:active,
+.btn-danger.active,
+.open > .dropdown-toggle.btn-danger {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}

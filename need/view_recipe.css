@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+:root {
+  --grapefruit: #F77367;
+  --cream: #FCF8E8;
+  --dark: #F77367;
+  --mint: #C7E8C7;
+  --darkmint: #AFD1AF;
+  --chocolate: #5B3D2A;
+}
+
+div{
+    font-size: 18px;
+}
+
+li{
+    
+}
+
+.recipe_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 60%;
+  margin: auto;
+}
+
+.recipe_container .title{
+  grid-column: 1 / span 2;
+}
+
+.title h1{
+  font-size: 4em;
+}
+
+.grid_image img{
+  width: 100%;
+  padding: 1em;
+}
+
+.grid_content {
+    margin-left: 1.5em;
+    padding-top: 1.5em;
+    padding-right: 1.0em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 600px;
+    overflow-y: scroll;
+}
+
+.recipe_time {
+  display: inline;
+}
+
+#long {
+  grid-column: 1 / span 2;
+}
+
+.grid_content * {
+  text-align: left;
+}
+
+.fas {
+  font-size: 2em;
+  margin: 0 0.5em;
+}
+
+.fa{
+  margin: 0 1em;
+}
+
+#main .fa {
+  font-size: 2em;
+}
+
+.diet {
+  display: flex;
+  margin: 1em 0em;
+}
+
+.diet .tip {
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+  width: 15em;
+}
+
+.diet:hover .tip{
+  visibility: visible;
+}
+
+#hamburger {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  overflow-x: hidden;
+  background-color: #F77367;
+  padding-top: 25px;
+  transition: 0.5s;
+}
+
+#hamburger a{
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  color: #5B3D2A;
+  margin: 10px;
+}
+
+#main {
+  margin-left: 15px;
+}
+
+.page-header {
+  text-align: left;
+}
+
+#long {
+  grid-column: 1 / span 2;
+}
+
+.grid_content * {
+  text-align: left;
+}
+
+.fas {
+  font-size: 2em;
+  margin: 0 0.5em;
+}
+
+.fa{
+  margin: 0 1em;
+}
+
+#main .fa {
+  font-size: 2em;
+}

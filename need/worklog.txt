@@ -1,0 +1,30 @@
+SPECIFICS:
+- generic user profile image (inside hamburger menu)
+- CSS for map and reset password
+- fix select query (plural words, words inside phrases)
+- add delete buttons
+- make image buttons (hover text) for recipe views
+- recipe views
+- add logo, footer, hamburger menu for every page
+   - make hamburger button pointer when you hover over it
+- account for recipes without specified categories????
+- manage duplicates
+
+HTML and CSS done
+- login
+- logout
+- register
+
+HTML only done
+- reset_password
+- add_recipe
+
+Nothing done
+- welcome
+- view_recipe
+- repo
+- my_recipes
+- help documentation
+
+gds
+

@@ -1,0 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+:root {
+  --grapefruit: #F77367;
+  --cream: #FCF8E8;
+  --dark: #F77367;
+  --mint: #C7E8C7;
+  --darkmint: #AFD1AF;
+  --chocolate: #5B3D2A;
+}
+
+label{
+  font-family: 'Lato';
+  font-size: 20px;
+  color: var(--chocolate);
+}

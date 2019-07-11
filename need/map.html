@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Fork | Map</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Links to CSS files-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="map.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="allLocations.js"></script>
+    <script>
+                function openmenu(category) {
+                        if (document.getElementById(category).style.display == "none"){
+                            document.getElementById(category).style.display = "block";
+                        } 
+                        else {
+                            document.getElementById(category).style.display = "none";
+                        }
+                    }
+                    // Open and close hamburger menu on click
+                    function myFunction() {
+                      var x = document.getElementById("hamburger");
+                      if (x.style.width < "10px") {
+                         document.getElementById("hamburger").style.width = "250px";
+                        document.getElementById("main").style.marginLeft = "275px";
+                        // x.style.display = "none";
+                      } else {
+                        // x.style.display = "block";
+                        document.getElementById("hamburger").style.width = "0px";
+                        document.getElementById("main").style.marginLeft = "25px";
+                      }
+                    }
+                </script>
+  </head>
+  <body>    
+    <!--Links to other pages in hamburger menu-->
+    <div id="hamburger">
+            <br/>
+            <br/>
+            <a href="about.html">about</a>
+            <a href="user_uploads.php">my uploads</a>
+            <a href="repo.php">favorites</a>
+            <a href="map.html">map</a>
+            <a href="reset_password.php">reset password</a>
+            <a href="logout.php" style="color: #FCF8E8;">sign out</a>
+        </div>
+        <!--Logo in header-->
+        <div id="main">
+        <div class="page-header">
+            <i class="fa fa-bars" onclick="myFunction()"></i>
+            <a href="welcome.php"><img src="fork-mint-cream.png" height="40" alt="logo in mint"></a>
+            </div>
+        </div>
+    <div class="content">
+      <h1>Map and Supermarket Locator</h1>
+      <!--Form for user to input address and maximum distance from grocery stores-->
+      <form action="#" method="post">
+        <label for="maxRadius">Find locations within
+          <input name="maxRadius" id="maxRadius" type="number" min="1" class="input txtbox" required='required'/>
+        </label>
+        <label for="userAddress"> miles of
+          <input name="userAddress" id="userAddress" type="text" placeholder="your address" class="input txtbox" required='required'/>
+        </label>
+        <button id="submitLocationSearch" class="btn btn-default">search</button>
+      </form>
+
+      <p id="location-search-alert" style="font-size: 24px; font-weight: normal;">All Locations</p>
+      <!--Display map with markers-->
+      <div id="locations-near-you-map"></div>
+      <!--Display list of filtered locations-->
+      <div id="locations-near-you"></div>
+      <!--Use Google Maps API-->
+      <script defer src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyAeuC_DNO_mR4CWLDDJWdwjgJCPNF-V3j8&callback=createSearchableMap"></script>
+      <script src="createSearchableMap.js"></script>
+    </div>
+  </body>
+</html> 
